@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Từ điển demo</title>
+    <style>
+        .button {
+          background-color: #4CAF50;
+          border: none;
+          color: white;
+          padding: 15px 32px;
+          text-align: center;
+          text-decoration: none;
+          display: inline-block;
+          font-size: 16px;
+          margin: 4px 2px;
+          cursor: pointer;
+        }
+        .ketqua{
+          width: 23.5%;
+          padding: 12px 20px;
+          margin: 8px 0;
+          display: inline-block;
+          border: 1px solid #ccc;
+          border-radius: 4px;
+          box-sizing: border-box;
+          }
+        </style>
+</head>
+<body>
+<h1>Từ Điển Demo </h1>
+<input type="text" class =ketqua id="Tratu">
+<button id="search" class =button onclick="Tim()">Search</button><br>
+<div id="result"></div>
+<script>
+    var English = ["Cat","Dog","Chicken","Fish","Rabbit"];
+    var Vietnamese = ["Con Mèo","Con Chó","Con Gà","Con Cá","Con Thỏ"];
+    function Tim() {
+        var tu= document.getElementById("Tratu").value;
+        var ketqua =0;
+        for (var i=0; i< English.length;i++){
+            if (tu == English[i]){
+                confirm(Vietnamese[i]);
+                ketqua =1;
+            }
+        }
+        if (ketqua ==0){
+                confirm("Khong co ket qua");
+        }
+    }
+</script>
+</body>
+</html>
